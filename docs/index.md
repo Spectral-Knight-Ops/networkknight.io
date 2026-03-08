@@ -6,7 +6,15 @@ title: Welcome
 
 # NetworkKnight
 
-Personal cybersecurity knowledge base — red team techniques, defensive operations, tools, and project documentation.
+NetworkKnight is a structured cybersecurity knowledge base focused on offensive security, defensive operations, and practical security engineering.
+
+The goal is to document real-world techniques, tools, and methodologies used across the cyber kill chain — from reconnaissance and initial access through detection engineering and incident response.
+
+This project serves as:
+
+• A personal knowledge repository  
+• A reference for security practitioners  
+• A growing library of hands-on cybersecurity projects
 
 ## Quick Navigation
 
@@ -19,7 +27,7 @@ Personal cybersecurity knowledge base — red team techniques, defensive operati
 
 ## Environment Variables
 
-All command examples across this site use standard variable names. Set them once at the start of a session:
+All command examples across this site use standard variable names. Set these variables at the start of your session:
 
 ```bash
 export TARGET=<ip>
@@ -28,6 +36,6 @@ export DOMAIN=<domain>
 export USER=<username>
 export PASSWORD=<password>
 export LHOST=<your-ip>
-export LPORT=4444
+export LPORT=<port>
 export HASH=<ntlm-hash>
 ```
