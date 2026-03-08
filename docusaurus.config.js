@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'NetworkKnight',
   tagline: 'Cybersecurity Knowledge Base',
-  favicon: 'img/knight.png',
+  favicon: 'img/knight_large.png',
 
   // GitHub Pages deployment config
   url: 'https://networkknight.io',
