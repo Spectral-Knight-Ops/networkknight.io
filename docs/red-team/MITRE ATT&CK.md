@@ -77,7 +77,7 @@ Run attacker-controlled code on the target system.
 
 Maintain access across reboots, credential changes, and network interruptions.
 
-- [Persistence](/red-team/post-exploitation/persistence/persistence) — scheduled tasks, registry run keys, services, DLL hijacking, WMI subscriptions, cron jobs, SSH keys, systemd, SUID backdoors
+- [Persistence](/red-team/post-exploitation/persistence) — scheduled tasks, registry run keys, services, DLL hijacking, WMI subscriptions, cron jobs, SSH keys, systemd, SUID backdoors
 - [AD Persistence](/red-team/active-directory/persistence/ad-persistence) — golden/silver/diamond tickets, skeleton key, AdminSDHolder, ACL abuse, SID history, DSRM, certificate forgery, machine accounts
 
 ---
@@ -103,8 +103,8 @@ Avoid detection by security tools and monitoring.
 
 Steal credentials for further access and lateral movement.
 
-- [Credential Harvesting](/red-team/post-exploitation/credential-harvesting/credential-harvesting) — Mimikatz, LSASS dumps, SAM extraction, DPAPI, browser credentials, WiFi passwords, registry secrets, Linux config files, SSH keys, Responder, NTLM relay
-- [AD Authentication Attacks](/red-team/active-directory/authentication-attacks/authentication-attacks) — AS-REP Roasting, Kerberoasting, password spraying, DC Sync, NTLM relay, coercion attacks (PetitPotam, PrinterBug), ADCS attacks, shadow credentials
+- [Credential Harvesting](/red-team/post-exploitation/credential-harvesting) — Mimikatz, LSASS dumps, SAM extraction, DPAPI, browser credentials, WiFi passwords, registry secrets, Linux config files, SSH keys, Responder, NTLM relay
+- [AD Authentication Attacks](/red-team/active-directory/authentication-attacks) — AS-REP Roasting, Kerberoasting, password spraying, DC Sync, NTLM relay, coercion attacks (PetitPotam, PrinterBug), ADCS attacks, shadow credentials
 - [Password Attacks](/red-team/exploitation/passwords/password-attacks) — hash cracking (Hashcat, John), wordlist mutation, credential spraying
 
 ---
@@ -123,7 +123,7 @@ Learn about the environment — users, groups, systems, shares, and trust relati
 
 Move between systems in the target network to reach high-value targets.
 
-- [AD Lateral Movement](/red-team/active-directory/lateral-movement/lateral-movement) — WMI, WinRM, PsExec, pass-the-hash, overpass-the-hash, pass-the-ticket, DCOM, silver/golden tickets, shadow copies
+- [AD Lateral Movement](/red-team/active-directory/lateral-movement) — WMI, WinRM, PsExec, pass-the-hash, overpass-the-hash, pass-the-ticket, DCOM, silver/golden tickets, shadow copies
 - [Pivoting & Tunneling](/red-team/pivoting/pivoting) — SSH tunneling, Chisel, Ligolo-ng, sshuttle, Proxychains, netsh, plink, DNS/ICMP tunneling, Meterpreter pivoting, double pivoting
 
 ---
@@ -132,8 +132,8 @@ Move between systems in the target network to reach high-value targets.
 
 Gather data of interest from compromised systems before exfiltration.
 
-- Staging and compression techniques covered in [Data Exfiltration](/red-team/post-exploitation/data-exfiltration/data-exfiltration#staging-and-preparation)
-- Sensitive file discovery commands covered in [Windows Privesc](/red-team/post-exploitation/privilege-escalation/windows#post-exploit-survey-information-gathering) and [Credential Harvesting](/red-team/post-exploitation/credential-harvesting/credential-harvesting)
+- Staging and compression techniques covered in [Data Exfiltration](/red-team/post-exploitation/data-exfiltration)
+- Sensitive file discovery commands covered in [Windows Privesc](/red-team/post-exploitation/privilege-escalation/windows#post-exploit-survey-information-gathering) and [Credential Harvesting](/red-team/post-exploitation/credential-harvesting)
 
 ---
 
