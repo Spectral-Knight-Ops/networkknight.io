@@ -18,12 +18,12 @@ This project serves as:
 
 ## Quick Navigation
 
-- **[Red Teaming](/red-teaming/methodology)** — Offensive techniques from recon through post-exploitation
-- **[Active Directory](/red-teaming/active-directory/enumeration/ad-enumeration)** — AD enumeration, authentication attacks, lateral movement
-- **[Privilege Escalation (Windows)](/red-teaming/post-exploitation/privilege-escalation/windows)** — Full Windows privesc methodology
-- **[Privilege Escalation (Linux)](/red-teaming/post-exploitation/privilege-escalation/linux)** — Full Linux privesc methodology
-- **[Defensive](/defensive/siem/elastic/elastic)** — SIEM, monitoring, incident response, hardening
-- **[Projects](/projects/honeypot/honeypot)** — Hands-on project documentation
+- **[Red Team](/red-team/MITRE%20ATT&CK)** — Offensive techniques from recon through post-exploitation
+- **[Active Directory](/red-team/active-directory/enumeration/ad-enumeration)** — AD enumeration, authentication attacks, lateral movement
+- **[Privilege Escalation (Windows)](/red-team/post-exploitation/privilege-escalation/windows)** — Full Windows privesc methodology
+- **[Privilege Escalation (Linux)](/red-team/post-exploitation/privilege-escalation/linux)** — Full Linux privesc methodology
+- **[Blue Team](/blue-team/siem/elastic)** — SIEM, monitoring, incident response, hardening
+- **[Projects](/projects/llm-evaluator)** — Hands-on project documentation
 
 ## Environment Variables
 
