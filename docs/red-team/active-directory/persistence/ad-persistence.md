@@ -391,7 +391,7 @@ nxc smb $TARGET -u 'YOURPC$' -p 'Password123!'
 
 Volume shadow copies on domain controllers contain the NTDS.dit database with all domain password hashes. Creating a shadow copy preserves a snapshot that persists even if passwords are changed later.
 
-Full extraction procedure is covered on the [Lateral Movement](/red-teaming/active-directory/lateral-movement/lateral-movement#shadow-copies) page.
+Full extraction procedure is covered on the [Lateral Movement](/red-team/active-directory/lateral-movement/lateral-movement#shadow-copies) page.
 
 ---
 

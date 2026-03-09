@@ -126,7 +126,7 @@ If SSH allows password authentication, spray any discovered credentials against 
 
 ## HTTP / HTTPS (Ports 80, 443, 8080, 8443, etc.)
 
-Web enumeration is covered in detail in the [Web App Methodology](/red-teaming/enumeration/web/methodology) page. Quick checklist here:
+Web enumeration is covered in detail in the [Web App Methodology](/red-team/enumeration/web/methodology) page. Quick checklist here:
 
 ### Technology Fingerprinting
 
@@ -167,7 +167,7 @@ wpscan --url http://$TARGET --enumerate ap,at,cb,dbe
 
 ## SMB (Ports 139, 445)
 
-SMB enumeration is covered in detail on the [SMB Enumeration](/red-teaming/recon/active/smb-enumeration) page. Quick reference:
+SMB enumeration is covered in detail on the [SMB Enumeration](/red-team/recon/active/smb-enumeration) page. Quick reference:
 
 ```bash
 enum4linux-ng $TARGET
@@ -186,7 +186,7 @@ nmap --script smb-vuln* -p 445 $TARGET
 
 ## DNS (Port 53)
 
-DNS enumeration is covered on the [DNS Enumeration](/red-teaming/recon/active/dns-enumeration) page. Quick reference:
+DNS enumeration is covered on the [DNS Enumeration](/red-team/recon/active/dns-enumeration) page. Quick reference:
 
 Attempt zone transfer:
 
@@ -230,7 +230,7 @@ If VRFY is disabled, try RCPT TO — send a `MAIL FROM` followed by `RCPT TO:<us
 
 ## SNMP (UDP Port 161)
 
-SNMP enumeration is covered on the [SMTP & SNMP Enumeration](/red-teaming/recon/active/smtp-snmp-enumeration) page. Quick reference:
+SNMP enumeration is covered on the [SMTP & SNMP Enumeration](/red-team/recon/active/smtp-snmp-enumeration) page. Quick reference:
 
 ```bash
 snmpwalk -v2c -c public $TARGET
@@ -322,7 +322,7 @@ nxc mssql $TARGET -u $USER -p $PASSWORD -q "SELECT @@version"
 nxc mssql $TARGET -u $USER -p $PASSWORD -q "SELECT name FROM sys.databases"
 ```
 
-Full SQL injection and database attack techniques are covered on the [SQL Injection](/red-teaming/exploitation/web/sql-injection) page.
+Full SQL injection and database attack techniques are covered on the [SQL Injection](/red-team/exploitation/web/sql-injection) page.
 
 ---
 
@@ -462,7 +462,7 @@ mount -t nfs $TARGET:/share /tmp/nfs
 ls -la /tmp/nfs
 ```
 
-Check for `no_root_squash` in `/etc/exports` on the target (if accessible) — this allows privilege escalation via SUID binaries. See the [Linux Privilege Escalation](/red-teaming/post-exploitation/privilege-escalation/linux) page for the full technique.
+Check for `no_root_squash` in `/etc/exports` on the target (if accessible) — this allows privilege escalation via SUID binaries. See the [Linux Privilege Escalation](/red-team/post-exploitation/privilege-escalation/linux) page for the full technique.
 
 ---
 

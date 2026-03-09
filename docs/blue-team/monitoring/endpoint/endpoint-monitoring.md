@@ -181,7 +181,7 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription" /v O
 
 ### auditd
 
-The Linux audit daemon provides detailed system call auditing. See the [Linux Hardening](/defensive/hardening/linux/linux-hardening#audit-and-logging) page for installation and configuration.
+The Linux audit daemon provides detailed system call auditing. See the [Linux Hardening](/blue-team/hardening/linux/linux-hardening#audit-and-logging) page for installation and configuration.
 
 Key audit rules for detection:
 

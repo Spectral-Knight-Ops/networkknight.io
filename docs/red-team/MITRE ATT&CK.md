@@ -26,14 +26,14 @@ export HASH=<ntlm-hash>
 Gather information about the target before direct interaction. Understand the attack surface — domains, employees, technologies, and infrastructure.
 
 **Passive (no direct contact with target):**
-- [Google Dorking](/red-teaming/recon/passive/google-dorking) — search engine operators to find exposed files, directories, and information
-- [OSINT Tools](/red-teaming/recon/passive/osint-tools) — theHarvester, Shodan, Netcraft, subdomain enumeration, certificate transparency, GitHub secret scanning, metadata analysis
+- [Google Dorking](/red-team/recon/passive/google-dorking) — search engine operators to find exposed files, directories, and information
+- [OSINT Tools](/red-team/recon/passive/osint-tools) — theHarvester, Shodan, Netcraft, subdomain enumeration, certificate transparency, GitHub secret scanning, metadata analysis
 
 **Active (direct interaction with target):**
-- [Port Scanning](/red-teaming/recon/active/port-scanning) — Nmap, masscan, service version detection
-- [DNS Enumeration](/red-teaming/recon/active/dns-enumeration) — zone transfers, brute forcing, dnsrecon, dnsenum
-- [SMB Enumeration](/red-teaming/recon/active/smb-enumeration) — share enumeration, null sessions, enum4linux
-- [SMTP & SNMP Enumeration](/red-teaming/recon/active/smtp-snmp-enumeration) — user enumeration, community string brute forcing
+- [Port Scanning](/red-team/recon/active/port-scanning) — Nmap, masscan, service version detection
+- [DNS Enumeration](/red-team/recon/active/dns-enumeration) — zone transfers, brute forcing, dnsrecon, dnsenum
+- [SMB Enumeration](/red-team/recon/active/smb-enumeration) — share enumeration, null sessions, enum4linux
+- [SMTP & SNMP Enumeration](/red-team/recon/active/smtp-snmp-enumeration) — user enumeration, community string brute forcing
 
 ---
 
@@ -41,9 +41,9 @@ Gather information about the target before direct interaction. Understand the at
 
 Prepare the tools, infrastructure, and payloads needed for the engagement.
 
-- Generate payloads with [msfvenom](/red-teaming/c2/metasploit#msfvenom-payload-generation) — reverse shells, DLLs, MSI packages, web shells
-- Apply [AV Evasion](/red-teaming/evasion/av-evasion) techniques — AMSI bypass, encoding, custom loaders, LOLBins
-- Set up listeners and C2 infrastructure — [Metasploit](/red-teaming/c2/metasploit), Sliver, or other frameworks
+- Generate payloads with [msfvenom](/red-team/c2/metasploit#msfvenom-payload-generation) — reverse shells, DLLs, MSI packages, web shells
+- Apply [AV Evasion](/red-team/evasion/av-evasion) techniques — AMSI bypass, encoding, custom loaders, LOLBins
+- Set up listeners and C2 infrastructure — [Metasploit](/red-team/c2/metasploit), Sliver, or other frameworks
 - Prepare [File Transfer](/misc/file-transfer) methods — HTTP servers, SMB shares, upload servers
 
 ---
@@ -52,14 +52,14 @@ Prepare the tools, infrastructure, and payloads needed for the engagement.
 
 Gain a foothold on the target network. The entry point depends on what reconnaissance revealed.
 
-- [Web Application Attacks](/red-teaming/enumeration/web/methodology) — identify and exploit web vulnerabilities
-- [SQL Injection](/red-teaming/exploitation/web/sql-injection) — database attacks, OS command execution via SQLi
-- [Path Traversal & LFI](/red-teaming/exploitation/web/path-traversal-lfi) — file read, log poisoning, PHP wrappers, RCE via file inclusion
-- [Cross-Site Scripting](/red-teaming/exploitation/web/xss) — session hijacking, phishing via XSS
-- [Client-Side Attacks](/red-teaming/exploitation/phishing/client-side-attacks) — Office macros, HTA payloads, phishing, malicious shortcuts
-- [Public Exploits](/red-teaming/exploitation/network/public-exploits) — searchsploit, Exploit-DB, CVE exploitation
-- [Password Attacks](/red-teaming/exploitation/passwords/password-attacks) — spraying, brute forcing, cracking
-- [Service Enumeration](/red-teaming/enumeration/network/service-enumeration) — per-service attack procedures for FTP, SSH, SMB, RDP, databases, Redis, etc.
+- [Web Application Attacks](/red-team/enumeration/web/methodology) — identify and exploit web vulnerabilities
+- [SQL Injection](/red-team/exploitation/web/sql-injection) — database attacks, OS command execution via SQLi
+- [Path Traversal & LFI](/red-team/exploitation/web/path-traversal-lfi) — file read, log poisoning, PHP wrappers, RCE via file inclusion
+- [Cross-Site Scripting](/red-team/exploitation/web/xss) — session hijacking, phishing via XSS
+- [Client-Side Attacks](/red-team/exploitation/phishing/client-side-attacks) — Office macros, HTA payloads, phishing, malicious shortcuts
+- [Public Exploits](/red-team/exploitation/network/public-exploits) — searchsploit, Exploit-DB, CVE exploitation
+- [Password Attacks](/red-team/exploitation/passwords/password-attacks) — spraying, brute forcing, cracking
+- [Service Enumeration](/red-team/enumeration/network/service-enumeration) — per-service attack procedures for FTP, SSH, SMB, RDP, databases, Redis, etc.
 
 ---
 
@@ -67,9 +67,9 @@ Gain a foothold on the target network. The entry point depends on what reconnais
 
 Run attacker-controlled code on the target system.
 
-- [Metasploit Framework](/red-teaming/c2/metasploit) — exploit modules, Meterpreter, payload execution
-- PowerShell and cmd.exe execution techniques covered across the [AV Evasion](/red-teaming/evasion/av-evasion) page (encoded commands, LOLBins, AMSI bypass)
-- WMI and DCOM execution covered in [AD Lateral Movement](/red-teaming/active-directory/lateral-movement/lateral-movement)
+- [Metasploit Framework](/red-team/c2/metasploit) — exploit modules, Meterpreter, payload execution
+- PowerShell and cmd.exe execution techniques covered across the [AV Evasion](/red-team/evasion/av-evasion) page (encoded commands, LOLBins, AMSI bypass)
+- WMI and DCOM execution covered in [AD Lateral Movement](/red-team/active-directory/lateral-movement/lateral-movement)
 
 ---
 
@@ -77,8 +77,8 @@ Run attacker-controlled code on the target system.
 
 Maintain access across reboots, credential changes, and network interruptions.
 
-- [Persistence](/red-teaming/post-exploitation/persistence/persistence) — scheduled tasks, registry run keys, services, DLL hijacking, WMI subscriptions, cron jobs, SSH keys, systemd, SUID backdoors
-- [AD Persistence](/red-teaming/active-directory/persistence/ad-persistence) — golden/silver/diamond tickets, skeleton key, AdminSDHolder, ACL abuse, SID history, DSRM, certificate forgery, machine accounts
+- [Persistence](/red-team/post-exploitation/persistence/persistence) — scheduled tasks, registry run keys, services, DLL hijacking, WMI subscriptions, cron jobs, SSH keys, systemd, SUID backdoors
+- [AD Persistence](/red-team/active-directory/persistence/ad-persistence) — golden/silver/diamond tickets, skeleton key, AdminSDHolder, ACL abuse, SID history, DSRM, certificate forgery, machine accounts
 
 ---
 
@@ -86,8 +86,8 @@ Maintain access across reboots, credential changes, and network interruptions.
 
 Gain higher-level permissions on a compromised system.
 
-- [Windows Privilege Escalation](/red-teaming/post-exploitation/privilege-escalation/windows) — service hijacking, unquoted paths, DLL hijacking, registry abuse, scheduled tasks, AlwaysInstallElevated, potato attacks, token impersonation, kernel exploits, UAC bypass
-- [Linux Privilege Escalation](/red-teaming/post-exploitation/privilege-escalation/linux) — sudo abuse, SUID/SGID, capabilities, cron jobs, kernel exploits, Docker/LXD group, wildcard injection, NFS no_root_squash, weak file permissions
+- [Windows Privilege Escalation](/red-team/post-exploitation/privilege-escalation/windows) — service hijacking, unquoted paths, DLL hijacking, registry abuse, scheduled tasks, AlwaysInstallElevated, potato attacks, token impersonation, kernel exploits, UAC bypass
+- [Linux Privilege Escalation](/red-team/post-exploitation/privilege-escalation/linux) — sudo abuse, SUID/SGID, capabilities, cron jobs, kernel exploits, Docker/LXD group, wildcard injection, NFS no_root_squash, weak file permissions
 
 ---
 
@@ -95,7 +95,7 @@ Gain higher-level permissions on a compromised system.
 
 Avoid detection by security tools and monitoring.
 
-- [AV Evasion](/red-teaming/evasion/av-evasion) — AMSI bypass, PowerShell Constrained Language Mode bypass, payload encoding/obfuscation, custom shellcode loaders, process injection, living off the land binaries
+- [AV Evasion](/red-team/evasion/av-evasion) — AMSI bypass, PowerShell Constrained Language Mode bypass, payload encoding/obfuscation, custom shellcode loaders, process injection, living off the land binaries
 
 ---
 
@@ -103,9 +103,9 @@ Avoid detection by security tools and monitoring.
 
 Steal credentials for further access and lateral movement.
 
-- [Credential Harvesting](/red-teaming/post-exploitation/credential-harvesting/credential-harvesting) — Mimikatz, LSASS dumps, SAM extraction, DPAPI, browser credentials, WiFi passwords, registry secrets, Linux config files, SSH keys, Responder, NTLM relay
-- [AD Authentication Attacks](/red-teaming/active-directory/authentication-attacks/authentication-attacks) — AS-REP Roasting, Kerberoasting, password spraying, DC Sync, NTLM relay, coercion attacks (PetitPotam, PrinterBug), ADCS attacks, shadow credentials
-- [Password Attacks](/red-teaming/exploitation/passwords/password-attacks) — hash cracking (Hashcat, John), wordlist mutation, credential spraying
+- [Credential Harvesting](/red-team/post-exploitation/credential-harvesting/credential-harvesting) — Mimikatz, LSASS dumps, SAM extraction, DPAPI, browser credentials, WiFi passwords, registry secrets, Linux config files, SSH keys, Responder, NTLM relay
+- [AD Authentication Attacks](/red-team/active-directory/authentication-attacks/authentication-attacks) — AS-REP Roasting, Kerberoasting, password spraying, DC Sync, NTLM relay, coercion attacks (PetitPotam, PrinterBug), ADCS attacks, shadow credentials
+- [Password Attacks](/red-team/exploitation/passwords/password-attacks) — hash cracking (Hashcat, John), wordlist mutation, credential spraying
 
 ---
 
@@ -113,9 +113,9 @@ Steal credentials for further access and lateral movement.
 
 Learn about the environment — users, groups, systems, shares, and trust relationships.
 
-- [AD Enumeration](/red-teaming/active-directory/enumeration/ad-enumeration) — net commands, LDAP queries, PowerView, BloodHound/SharpHound, NetExec, Kerbrute, GPO/trust/ACL enumeration
-- [Service Enumeration](/red-teaming/enumeration/network/service-enumeration) — per-service enumeration for every common port
-- [Web App Methodology](/red-teaming/enumeration/web/methodology) — technology fingerprinting, directory brute forcing, manual inspection
+- [AD Enumeration](/red-team/active-directory/enumeration/ad-enumeration) — net commands, LDAP queries, PowerView, BloodHound/SharpHound, NetExec, Kerbrute, GPO/trust/ACL enumeration
+- [Service Enumeration](/red-team/enumeration/network/service-enumeration) — per-service enumeration for every common port
+- [Web App Methodology](/red-team/enumeration/web/methodology) — technology fingerprinting, directory brute forcing, manual inspection
 
 ---
 
@@ -123,8 +123,8 @@ Learn about the environment — users, groups, systems, shares, and trust relati
 
 Move between systems in the target network to reach high-value targets.
 
-- [AD Lateral Movement](/red-teaming/active-directory/lateral-movement/lateral-movement) — WMI, WinRM, PsExec, pass-the-hash, overpass-the-hash, pass-the-ticket, DCOM, silver/golden tickets, shadow copies
-- [Pivoting & Tunneling](/red-teaming/pivoting/pivoting) — SSH tunneling, Chisel, Ligolo-ng, sshuttle, Proxychains, netsh, plink, DNS/ICMP tunneling, Meterpreter pivoting, double pivoting
+- [AD Lateral Movement](/red-team/active-directory/lateral-movement/lateral-movement) — WMI, WinRM, PsExec, pass-the-hash, overpass-the-hash, pass-the-ticket, DCOM, silver/golden tickets, shadow copies
+- [Pivoting & Tunneling](/red-team/pivoting/pivoting) — SSH tunneling, Chisel, Ligolo-ng, sshuttle, Proxychains, netsh, plink, DNS/ICMP tunneling, Meterpreter pivoting, double pivoting
 
 ---
 
@@ -132,8 +132,8 @@ Move between systems in the target network to reach high-value targets.
 
 Gather data of interest from compromised systems before exfiltration.
 
-- Staging and compression techniques covered in [Data Exfiltration](/red-teaming/post-exploitation/data-exfiltration/data-exfiltration#staging-and-preparation)
-- Sensitive file discovery commands covered in [Windows Privesc](/red-teaming/post-exploitation/privilege-escalation/windows#post-exploit-survey-information-gathering) and [Credential Harvesting](/red-teaming/post-exploitation/credential-harvesting/credential-harvesting)
+- Staging and compression techniques covered in [Data Exfiltration](/red-team/post-exploitation/data-exfiltration/data-exfiltration#staging-and-preparation)
+- Sensitive file discovery commands covered in [Windows Privesc](/red-team/post-exploitation/privilege-escalation/windows#post-exploit-survey-information-gathering) and [Credential Harvesting](/red-team/post-exploitation/credential-harvesting/credential-harvesting)
 
 ---
 
@@ -141,8 +141,8 @@ Gather data of interest from compromised systems before exfiltration.
 
 Maintain communication with compromised systems.
 
-- [Metasploit Framework](/red-teaming/c2/metasploit) — multi/handler, Meterpreter sessions, pivoting, post-exploitation modules
-- [Pivoting & Tunneling](/red-teaming/pivoting/pivoting) — Chisel, Ligolo-ng, DNS tunneling, ICMP tunneling for C2 in restricted environments
+- [Metasploit Framework](/red-team/c2/metasploit) — multi/handler, Meterpreter sessions, pivoting, post-exploitation modules
+- [Pivoting & Tunneling](/red-team/pivoting) — Chisel, Ligolo-ng, DNS tunneling, ICMP tunneling for C2 in restricted environments
 
 ---
 
@@ -150,7 +150,7 @@ Maintain communication with compromised systems.
 
 Transfer collected data out of the target environment.
 
-- [Data Exfiltration](/red-teaming/post-exploitation/data-exfiltration/data-exfiltration) — HTTP/HTTPS, SMB, DNS, ICMP, netcat, SCP, base64 encoding, cloud storage exfiltration
+- [Data Exfiltration](/red-team/post-exploitation/data-exfiltration) — HTTP/HTTPS, SMB, DNS, ICMP, netcat, SCP, base64 encoding, cloud storage exfiltration
 - [File Transfer](/misc/file-transfer) — all methods for moving files between attacker and target
 
 ---

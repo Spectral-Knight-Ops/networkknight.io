@@ -323,7 +323,7 @@ sudo ausearch -k sudoers --start today
 
 Ensure logs rotate to prevent disk exhaustion. Check `/etc/logrotate.conf` and service-specific configs in `/etc/logrotate.d/`.
 
-For centralized logging, forward logs to a SIEM using rsyslog or Filebeat (see [Elastic Stack](/defensive/siem/elastic/elastic) page).
+For centralized logging, forward logs to a SIEM using rsyslog or Filebeat (see [Elastic Stack](/blue-team/siem/elastic/elastic) page).
 
 ---
 
