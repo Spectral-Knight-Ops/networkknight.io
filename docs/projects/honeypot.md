@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
-title: Honeypot Project
+title: Honeypot
 ---
 
-# Honeypot Project
+# Honeypot
 
 *Documentation for the honeypot project with Elastic/SIEM integration - coming soon.*
