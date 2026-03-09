@@ -69,7 +69,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'mainSidebar',
             position: 'left',
-            label: 'Knowledge Base',
+            label: 'Home',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
@@ -83,11 +83,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Knowledge Base',
+            title: 'Home',
             items: [
-              { label: 'Red Teaming', to: '/red-teaming/methodology' },
-              { label: 'Defensive', to: '/defensive/siem/elastic/elastic' },
-              { label: 'Projects', to: '/projects/honeypot/honeypot' },
+              { label: 'Red Team', to: '/red-team/MITRE%20ATT&CK' },
+              { label: 'Blue Team', to: '/blue-team/siem/elastic' },
+              { label: 'Projects', to: '/projects/llm-evaluator' },
             ],
           },
           {
