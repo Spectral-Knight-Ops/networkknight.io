@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'NetworkKnight',
   tagline: 'Cybersecurity Knowledge Base',
-  favicon: 'img/knight.png',
+  favicon: 'img/knight-split-logo.png',
 
   // GitHub Pages deployment config
   url: 'https://networkknight.io',
@@ -59,7 +59,11 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'NetworkKnight',
+        title: 'Network Knight',
+        logo: {
+          alt: 'Network Knight Logo',
+          src: 'img/knight-split-logo.png',
+        },
         items: [
           {
             type: 'docSidebar',

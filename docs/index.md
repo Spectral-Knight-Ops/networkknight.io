@@ -4,7 +4,7 @@ slug: /
 title: Welcome
 ---
 
-# NetworkKnight
+# <img src="/img/knight-split-logo.png" alt="logo" style={{height: '80px', verticalAlign: 'middle', marginRight: '5px'}} />Network Knight
 
 NetworkKnight is a structured cybersecurity knowledge base focused on offensive security, defensive operations, and practical security engineering.
 
