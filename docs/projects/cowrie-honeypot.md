@@ -83,6 +83,6 @@ Planned improvements include a self-hosted Elastic Stack deployment, threat inte
 
 ---
 
-**Built with:** [Tyler Nagy](https://github.com/MrNagz/elastic-cowrie-honeypot)
+**Built with:** [MrNagz](https://github.com/MrNagz/elastic-cowrie-honeypot)
 
 **GitHub:** [Spectral-Knight-Ops/elastic-cowrie-honeypot](https://github.com/Spectral-Knight-Ops/elastic-cowrie-honeypot)
