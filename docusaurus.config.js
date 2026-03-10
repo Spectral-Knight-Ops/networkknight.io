@@ -98,7 +98,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} NetworkKnight. Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>. Built with Docusaurus.`,,
+        copyright: `Copyright © ${new Date().getFullYear()} NetworkKnight. Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
