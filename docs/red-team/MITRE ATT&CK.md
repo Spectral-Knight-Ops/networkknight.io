@@ -69,7 +69,7 @@ Run attacker-controlled code on the target system.
 
 - [Metasploit Framework](/red-team/c2/metasploit) — exploit modules, Meterpreter, payload execution
 - PowerShell and cmd.exe execution techniques covered across the [AV Evasion](/red-team/evasion/av-evasion) page (encoded commands, LOLBins, AMSI bypass)
-- WMI and DCOM execution covered in [AD Lateral Movement](/red-team/active-directory/lateral-movement/lateral-movement)
+- WMI and DCOM execution covered in [AD Lateral Movement](/red-team/active-directory/lateral-movement)
 
 ---
 
