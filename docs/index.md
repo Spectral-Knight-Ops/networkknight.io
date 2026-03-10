@@ -23,7 +23,7 @@ This project serves as:
 - **[Privilege Escalation (Windows)](/red-team/post-exploitation/privilege-escalation/windows)** — Full Windows privesc methodology
 - **[Privilege Escalation (Linux)](/red-team/post-exploitation/privilege-escalation/linux)** — Full Linux privesc methodology
 - **[Blue Team](/blue-team/siem/elastic)** — SIEM, monitoring, incident response, hardening
-- **[Projects](/projects/llm-evaluator)** — Hands-on project documentation
+- **[Projects](/projects/local-llm-evaluator)** — Hands-on project documentation
 
 ## Environment Variables
 

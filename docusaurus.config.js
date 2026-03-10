@@ -87,7 +87,7 @@ const config = {
             items: [
               { label: 'Red Team', to: '/red-team/MITRE%20ATT&CK' },
               { label: 'Blue Team', to: '/blue-team/siem/elastic' },
-              { label: 'Projects', to: '/projects/llm-evaluator' },
+              { label: 'Projects', to: '/projects/local-llm-evaluator' },
             ],
           },
           {
