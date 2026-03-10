@@ -239,6 +239,14 @@
   color: #3B8EEA;
 }
 
+.footer__links {
+  justify-content: center;
+}
+
+.footer__col {
+  text-align: center;
+}
+
 /* ── Pagination (prev/next page links) ── */
 [data-theme='dark'] .pagination-nav__link {
   border: 1px solid #2A3550;
