@@ -124,7 +124,7 @@ Learn about the environment — users, groups, systems, shares, and trust relati
 Move between systems in the target network to reach high-value targets.
 
 - [AD Lateral Movement](/red-team/active-directory/lateral-movement) — WMI, WinRM, PsExec, pass-the-hash, overpass-the-hash, pass-the-ticket, DCOM, silver/golden tickets, shadow copies
-- [Pivoting & Tunneling](/red-team/pivoting/pivoting) — SSH tunneling, Chisel, Ligolo-ng, sshuttle, Proxychains, netsh, plink, DNS/ICMP tunneling, Meterpreter pivoting, double pivoting
+- [Pivoting & Tunneling](/red-team/pivoting) — SSH tunneling, Chisel, Ligolo-ng, sshuttle, Proxychains, netsh, plink, DNS/ICMP tunneling, Meterpreter pivoting, double pivoting
 
 ---
 
