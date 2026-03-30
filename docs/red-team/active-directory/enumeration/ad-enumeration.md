@@ -175,25 +175,25 @@ ldapsearch -x -H ldap://$TARGET -b "DC=$DOMAIN" "(objectclass=*)"
 Enumerate all users with key attributes:
 
 ```bash
-ldapsearch -x -H ldap://$TARGET -D "$USER@$DOMAIN" -w "$PASSWORD" -b "DC=corp,DC=com" "(objectclass=user)" sAMAccountName description memberOf userAccountControl
+ldapsearch -x -H ldap://$TARGET -D "$USER@$DOMAIN" -w "$PASSWORD" -b "DC=example,DC=com" "(objectclass=user)" sAMAccountName description memberOf userAccountControl
 ```
 
 Enumerate groups:
 
 ```bash
-ldapsearch -x -H ldap://$TARGET -D "$USER@$DOMAIN" -w "$PASSWORD" -b "DC=corp,DC=com" "(objectclass=group)" cn member
+ldapsearch -x -H ldap://$TARGET -D "$USER@$DOMAIN" -w "$PASSWORD" -b "DC=example,DC=com" "(objectclass=group)" cn member
 ```
 
 Find users with SPNs (Kerberoastable accounts):
 
 ```bash
-ldapsearch -x -H ldap://$TARGET -D "$USER@$DOMAIN" -w "$PASSWORD" -b "DC=corp,DC=com" "(&(objectclass=user)(servicePrincipalName=*))" sAMAccountName servicePrincipalName
+ldapsearch -x -H ldap://$TARGET -D "$USER@$DOMAIN" -w "$PASSWORD" -b "DC=example,DC=com" "(&(objectclass=user)(servicePrincipalName=*))" sAMAccountName servicePrincipalName
 ```
 
 Find users with "Do not require Kerberos preauthentication" (AS-REP Roastable):
 
 ```bash
-ldapsearch -x -H ldap://$TARGET -D "$USER@$DOMAIN" -w "$PASSWORD" -b "DC=corp,DC=com" "(&(objectclass=user)(userAccountControl:1.2.840.113556.1.4.803:=4194304))" sAMAccountName
+ldapsearch -x -H ldap://$TARGET -D "$USER@$DOMAIN" -w "$PASSWORD" -b "DC=example,DC=com" "(&(objectclass=user)(userAccountControl:1.2.840.113556.1.4.803:=4194304))" sAMAccountName
 ```
 
 :::tip
