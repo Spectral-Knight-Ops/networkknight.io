@@ -27,7 +27,15 @@ This project serves as:
 
 ## Environment Variables
 
-All command examples across this site use standard variable names. Set these variables at the start of your session:
+All command examples across this site use standard variable names. Instead of exporting these in each terminal session, add them to your shell configuration file so they persist across all terminals.
+
+Edit `~/.zshrc` (or `~/.bashrc` if using Bash):
+
+```bash
+nano ~/.zshrc
+```
+
+Add your variables at the bottom of the file:
 
 ```bash
 export TARGET=<ip>
@@ -39,3 +47,17 @@ export LHOST=<your-ip>
 export LPORT=<port>
 export HASH=<ntlm-hash>
 ```
+
+Save the file with `Ctrl+X`, then press `Y` to confirm. Reload your configuration:
+
+```bash
+source ~/.zshrc
+```
+
+:::tip
+This way, `$TARGET`, `$LHOST`, and the rest are available in every terminal window — no need to re-export between tabs or after a reboot. Run `source ~/.zshrc` in any already-open terminals to pick up the changes immediately. New terminals will load them automatically.
+:::
+
+:::warning
+Remember to update these values when switching between targets or engagements. Stale variables pointing at a previous target are an easy way to run commands against the wrong host.
+:::
