@@ -100,7 +100,7 @@ Options explored:
 - **Flashing the OOS 11 NetHunter image on OOS 10 hardware** → kernel mismatch risk, likely crashdump
 - **Upgrading back to OOS 11** → too risky given the previous brick and dead firmware links
 - **Rootless/app-only NetHunter** → reduced capability (no custom kernel, no HID, no wireless injection)
-- **Community-built OOS 10 kernels** → none available for this specific device model
+- **Community-built OOS 10 kernels** → found one online from a random user, decided it was safer to build a new one
 - **Building a custom NetHunter image from source** → this is what we did
 
 ---
